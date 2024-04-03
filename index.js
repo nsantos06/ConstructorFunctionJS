@@ -15,17 +15,24 @@ function imprimirMotoLista(){
         console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
     }
 }
-function listarVeiculoAno(){
-    for(i of carroLista){
-        if(i.ano === 2018){
-            console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
-        }
-    }
-    for(i of motoLista){
-        if(i.ano === 2018){
-            console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
-        }
-    }
+// function listarVeiculoAno(){
+//     for(i of carroLista){
+//         if(i.ano === 2018){
+//             console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
+//         }
+//     }
+//     for(i of motoLista){
+//         if(i.ano === 2018){
+//             console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
+//         }
+//     }
+// }
+
+function listarVeiculoAno2(){
+    const filtroCarro = carroLista.filter(i => i.ano === 2018);
+    const filtroMoto = motoLista.filter(i => i.ano === 2018);
+    console.log(filtroCarro);
+    console.log(filtroMoto);
 }
 
 const carro1 = new VendaVeiculos('Carro', 'Fiesta', 'Ford', 2019, 30000);
@@ -40,6 +47,7 @@ const moto3 = new VendaVeiculos('Moto', 'Honda', 'CBR 400', 2017, 10000);
 let carroLista = [carro1, carro2, carro3, carro4, carro5];
 let motoLista = [moto1, moto2, moto3];
 
+
 imprimirCarroLista();
 imprimirMotoLista();
-listarVeiculoAno();
+listarVeiculoAno2();
