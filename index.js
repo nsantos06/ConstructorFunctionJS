@@ -18,24 +18,30 @@ const moto3 = new VendaVeiculos('Moto', 'Honda', 'CBR 400', 2017, 10000);
 let carroLista = [carro1, carro2, carro3, carro4, carro5];
 let motoLista = [moto1, moto2, moto3];
 
-// for(i of carroLista){
-//     console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
-// }
-
-// for(i of motoLista){
-//     console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco)
-// }
-
-for(i of carroLista){
-    if(i.ano === 2018){
+function imprimirCarroLista(){
+    for(i of carroLista){
         console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
     }
 }
 
-let listarCarros = carroLista.find(carro => carro.ano === 2018);
-for (i of carroLista){
-    if(i.ano === 2018){
-        console.log(listarCarros);
+function imprimirMotoLista(){
+    for(i of motoLista){
+        console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
     }
 }
 
+function listarVeiculoAno(){
+    for(i of carroLista){
+        if(i.ano === 2018){
+            console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
+        }
+    }
+    for(i of motoLista){
+        if(i.ano === 2018){
+            console.log(i.veiculo, i.modelo, i.marca, i.ano, i.preco);
+        }
+    }
+}
+imprimirCarroLista();
+imprimirMotoLista();
+listarVeiculoAno();
